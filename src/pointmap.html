@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>MatchDay.ai</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<script  src="scripts/CesiumHeatmap.js"></script>-->
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+-->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href="css/styleme.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/master.css">
+
+	<link rel="stylesheet" href="css/cool-navbars.css">
+
+
+	<script src="scripts/pointmap.js"></script>
+
+	<link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
+	<div class="line"></div>
+
+
+	<nav id="main-nav">
+		<ul class="menu">
+			<li class="logo"><a href="#">MatchDay.ai</a></li>
+			<li>PLAYER ANALYSIS</li>
+		</ul>
+		<ul class="menu">
+			<li class="item button secondary"><a href="index.html">Home</a></li>
+			<li class="item button secondary"><a href="pointmap.html">Point Map</a></li>
+			<li class="item button secondary"><a href="index.html#passes">Formation</a></li>
+			<li class="item button secondary"><a href="index.html#skateboarding">Heatmap</a></li>
+			<li class="item button secondary"><a href="goals.html">Goals</a></li>
+			<li class="item button secondary"><a href="distance.html">Distance</a></li>
+
+		</ul>
+    </nav>
+	
+		
+		<div id="screen">
+		
+			<div id="overlay_box">
+				<div id="action_box">
+					<div class="wrap">
+						<div id="actions"></div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="Rectangle_video">
+				<canvas id="gameCanvas" width="1400"  height="800%" style="background:url('css/c2.jpg')">
+				</canvas>
+			
+					<!-- <img src="css/c2.jpg" alt="" />	-->
+				
+				<!--  <video id="vid" width="100%"><source src="../static/videos/c2.jpg"></video>-->
+				<!--<div id="priorities"></div>
+				<div id="playerBoxes"></div>-->
+			</div>
+
+			<div id="whitespac">
+
+
+
+
+			</div>
+			<div id="Rectangle_progress_bar">
+				<div id="progress_bar">
+				</div>
+				<div id="sections">
+					<button id="teamtotalpoints">Point Map</button>
+
+					<div class="price-slider"><span>From
+							<input type="number" value="0" min="0" max="90" id="low" /> To
+							<input type="number" value="45" min="0" max="90" id="high" /></span>
+						<input value="0" min="0" max="90" step="1" type="range" />
+						<input value="45" min="0" max="90" step="1" type="range" />
+						<svg width="100%" height="24">
+							<line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12"
+								stroke-dasharray="1 28"></line>
+						</svg>
+					</div>
+				</div>
+			</div>
+	
+</div>
+
+
+	
+<script src="scripts/scrollspy.js"></script>
+<script src="scripts/tabs.js"></script>
+</body>
+</html>

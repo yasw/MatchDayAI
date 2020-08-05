@@ -1,0 +1,242 @@
+<html lang="en">
+
+<head>
+    <title>Annotation Tool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <script src={{ url_for('static', filename="dummydata.json") }}></script>
+	<link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <script src="https://rawgit.com/allensarkisyan/VideoFrame/master/VideoFrame.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../static/js/control_script.js" defer></script>
+    <script src="../static/js/action_script.js" defer></script>
+    <script src="../static/js/side_script.js" defer></script>
+
+</head>
+
+<body>
+    <div id="screen">
+
+        <div id="overlay_box">
+            <div id="action_box">
+                <div class="wrap">
+                    <div id="actions"></div>
+                </div>
+            </div>
+            <div id="notch">
+            </div>
+        </div>
+
+        <!-- <video id="vid" width="900" height="500"><source src="../sample.mp4">
+        </video>
+        <canvas id="canvasid" width="900" height="500"></canvas>
+      -->
+        <div id="Rectangle_video">
+            <video id="vid" width="1440" height="807"> 
+              <!-- DO NOT CHANGE THE HEIGHT AND WIDTH OF THE VIDEO TAG OR THE CANVAS TAG 
+              THE RANDOM DATA GENERAted is done based on these coordinates and hence do not change them
+              -->
+              <source src={{ url_for('static', filename="vid.mp4") }} type="video/mp4">
+
+              Your browser does not support the video tag.
+          </video>
+            <canvas id="canvasid" width="1440" height="807"></canvas>
+
+        </div>
+        <div id="actionist">
+        
+        </div>
+        <div id="Rectangle_progress_bar">
+            <div id="progress_bar">
+            </div>
+            <div id="sections">
+              
+            </div>
+        </div>
+
+        <div id="controls">
+            <h1 class="Speed">Speed</h1>
+            <img class="Shape1" id="speed_dec" src="../static/img/fast_rewind.png"></img>
+            <img class="Shape1" id="speed_inc" src="../static/img/fast_forward.png"></img>
+            <div id="speed_box">
+                <div id="speed_container">
+                    <p>X</p>
+                    <p id="speed_text">1</p>
+                </div>
+            </div>
+            <div class=vl id="vl1"></div>
+            <img class="Path1" id="volume" srcStartShort PassShort PassLong PassShootShort PassShort PassShoot src="../static/img/volume.png"></img>
+            <!-- <div id="slider_box">
+            <input type="range" min="1" max="100" value="50" id="vol_slider" id="myRange">
+          </div> -->
+            <img class="Path1" id="play" src="../static/img/play.png"></img>
+            <div class=vl id="vl2"></div>
+            <h1 class="Playback">Playback</h1>
+           
+            <img class="Shape2" id="rewind" src="../static/img/10s.png"></img>
+            <input onclick="highlight()" type="button" value="highlight formation" id="inter"></input>
+        </div>
+
+        <div id="sidebar">
+            <div id="team1" class="teambox">
+                <h1 id="team1label">Team 1</h1>
+                <br>
+                <div class="lineup">
+                    <div class="gkrow lineuprow">
+                        <div class="playerdataholder" id="p1" onclick="playerclicked(1)"><img id="1" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 1</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="defeserow lineuprow">
+                        <div class="playerdataholder" id="p2" onclick="playerclicked(2)"><img  id="2"src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 2</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p3" onclick="playerclicked(3)"><img id="3" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 3</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p4" onclick="playerclicked(4)"><img id="4"src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 4</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="defendingmidfieldrow lineuprow">
+                        <div class="playerdataholder" id="p5" onclick="playerclicked(5)"><img  id="5"src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 5</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p6" onclick="playerclicked(6)"><img id="6" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 6</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p7" onclick="playerclicked(7)"><img id="7" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 7</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="midfieldrow lineuprow">
+                        <div class="playerdataholder" id="p8" onclick="playerclicked(8)"><img id="8" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 8</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p9" onclick="playerclicked(9)"><img id="9" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 9</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p10" onclick="playerclicked(10)"><img id="10" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 10</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="attackingmidfieldrow lineuprow">
+                        <div class="playerdataholder" id="p11" onclick="playerclicked(11)"><img id="11" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 11</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        
+                    </div>
+                    <div class="slidecontainer">
+                        <input type="range" min="-100" max="100" value="0" class="slider" id="myRange">
+                    <input onclick="arrowcreationwithdeviation()" type="button" value="Draw Visualisation Arrow Curve" id="inter"/>
+							<input type="number" value="0" min="-100" max="100" id="high" /></span>
+                       
+                    <p> <span id="demo"></span></p>
+                      </div>
+                </div>
+            </div>
+            <div id="hl"></div>
+            <div id="team2" class="teambox">
+                <div class="lineup">
+
+                    <div class="attackingmidfieldrow lineuprow">
+                        <h1 id="team2label">Team 2</h1>
+                        <div class="playerdataholder" id="p12" onclick="playerclicked(12)"><img id="12" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 12</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="midfieldrow lineuprow">
+                        <div class="playerdataholder" id="p13" onclick="playerclicked(13)"><img id="13" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 13</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p14" onclick="playerclicked(14)"><img id="14" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 14</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p15" onclick="playerclicked(15)"><img id="15" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 15</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="defendingmidfieldrow lineuprow">
+                        <div class="playerdataholder" id="p16" onclick="playerclicked(16)"><img id="16" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 16</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p17" onclick="playerclicked(17)"><img id="17" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">PLayer 17</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p18" onclick="playerclicked(18)"><img id="18" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 18</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="defeserow lineuprow">
+                        <div class="playerdataholder" id="p19" onclick="playerclicked(19)"><img id="19" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 19</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p20" onclick="playerclicked(20)"><img id="20" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 20</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                        <div class="playerdataholder" id="p21" onclick="playerclicked(21)"><img id="21" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 21</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                    <div class="gkrow lineuprow">
+                        <div class="playerdataholder" id="p22" onclick="playerclicked(22)"><img id="22" src="../static/img/messi.jpg" class="playericon">
+                            <p class="playername">Player 22</p>
+                            <p class="playerpos">(CF)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </div>
+    <div id="pageZoom">
+        <div id="zoomIn" class="zoomButton">+</div>
+        <div id="zoomOut" class="zoomButton">-</div>
+    </div>
+
+
+    <style>
+        #canvasid {
+            position: absolute;
+            top: 6;
+            bottom: 0;
+            left: 6;
+            right: 0;
+            
+
+        }
+    </style>
+</body>
+
+
+</html>

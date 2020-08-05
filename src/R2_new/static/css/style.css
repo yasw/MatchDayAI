@@ -1,0 +1,529 @@
+/* full frame */
+
+.Path {
+    width: 40px;
+    height: 40px;
+}
+
+#screen {
+    transform-origin: 0 0;
+    width: 1820px;
+    height: 1024px;
+}
+
+
+/* video frame */
+
+#Rectangle_video {
+    width: 1440px;
+    height: 807px;
+    /*mix-blend-mode: color;*/
+    border: solid 1px #5F6661;
+    /*background-color: #d8d8d8;*/
+    /*pointer-events: none;*/
+}
+
+#Rectangle_video video {
+    min-width: 1440px;
+    min-height: 807px;
+    object-fit: cover;
+    /*filter: grayscale(100%);*/
+}
+
+#whitespace {
+    height: 87px;
+    width: 1440;
+    border: solid 1px black;
+}
+
+#controls {
+    height: 90px;
+    width: 1440px;
+    border: solid 1px #5F6661;
+    ;
+}
+
+#sidebar {
+    height: 950px;
+    width: 380px;
+    border: solid .5px #979797;
+    position: relative;
+    margin-top: -950px;
+    margin-left: 1440px;
+}
+
+
+/* whole portion of light bar */
+
+#Rectangle_progress_bar {
+    width: 1440px;
+    height: 40px;
+    border: solid 1px #5F6661;
+    background-color: #d8d8d8;
+    z-index: 1;
+}
+
+#progress_bar {
+    position: absolute;
+    height: 40px;
+    opacity: 0.37;
+    background-color: #001305;
+}
+
+
+/* speed icon */
+
+.Speed,
+.Playback {
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+}
+
+
+/* fast forward icon */
+
+.Shape1 {
+    width: 29px;
+    height: 20px;
+}
+
+#speed_box {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+    margin-left: 64px;
+}
+
+#speed_container {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+#speed_container p {
+    margin: 0;
+    font-family: Roboto;
+    font-weight: 700;
+    color: white;
+    display: inline;
+}
+
+#controls h1,
+div,
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.vl {
+    border-left: solid 2px #979797;
+    height: 90px;
+}
+
+.Speed {
+    margin-left: 66;
+}
+
+.Playback {
+    margin-left: 76px;
+}
+
+#speed_dec {
+    margin-left: 56px;
+    cursor: pointer;
+}
+
+#speed_inc {
+    margin-left: 67px;
+    cursor: pointer;
+}
+
+#vl1 {
+    margin-left: 162px;
+}
+
+#volume {
+    margin-left: 64px;
+}
+
+#play {
+    margin-left: 57px;
+    cursor: pointer;
+}
+
+#vl2 {
+    margin-left: 73px;
+}
+
+#rewind {
+    margin-left: 59px;
+    cursor: pointer;
+}
+
+#inter {
+    margin-left: 58px;
+}
+
+#next {
+    margin-left: 70px;
+}
+
+.Path1 {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* 10s back icon */
+
+.Shape2 {
+    width: 26.7px;
+    height: 33.3px;
+    background-color: #000000;
+}
+
+#overlay_box {
+    position: absolute;
+    margin-top: 833px;
+    margin-left: 0px;
+    opacity: 1;
+}
+
+#action_box {
+    width: 1285px;
+    height: 50px;
+    /*background-color: #3d3d3d;
+  opacity: 0.85;*/
+    overflow: hidden;
+}
+
+#notch {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 11px solid #555;
+}
+
+#slider_box {
+    position: absolute;
+    background-color: whitesmoke;
+    transform: rotate(90deg);
+    margin-top: -180px;
+    margin-left: 577px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    border: solid .5px black;
+}
+
+#vol_slider {
+    display: inline-block;
+    margin: auto 10px;
+}
+
+#pageZoom {
+    position: fixed;
+    background-color: black;
+    opacity: 0.7;
+    width: 100;
+    height: 50;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+}
+
+.zoomButton {
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#zoomIn {
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#zoomOut {
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#sections {
+    position: absolute;
+    height: 40px;
+    width: 1440px;
+}
+
+.section {
+    height: 40px;
+    width: 0px;
+    border-right: 1px solid #5F6661;
+    margin: 0;
+}
+
+.action {
+    height: 50px;
+    width: 0px;
+    border-right: 1px solid white;
+    margin: 0;
+    color: white;
+    padding-left: 20px;
+    padding-top: 15px;
+    background-color: #3d3d3d;
+    opacity: 0.5;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.wrap {
+    width: 999999px;
+}
+
+#actionList {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 226px;
+    height: 240px;
+    background-color: #f3f3f3;
+    visibility: hidden;
+}
+
+#playerList {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 226px;
+    height: 120px;
+    background-color: #f3f3f3;
+    visibility: hidden;
+}
+
+.actionOption {
+    width: 226px;
+    height: 40px;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.actionOption p {
+    margin: 10px;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+.Rule {
+    margin: 0px 16px;
+    width: 193.8px;
+    height: 1px;
+    background-color: #dcdcdc;
+}
+
+.shortpass {
+    width: 25px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.goal {
+    width: 25px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.longpass {
+    width: 27px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.dribble {
+    width: 23px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.tackle {
+    width: 25px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.interception {
+    width: 25px;
+    height: 11px;
+    object-fit: contain;
+}
+
+.teambox {
+    height: 514;
+    width: 380;
+    padding: 0;
+}
+
+.teambox h1 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.playericon {
+    height: 80%;
+    width: 80%;
+    border-radius: 100%;
+    /*padding-top: 4%;*/
+}
+
+#team1label {
+    position: absolute;
+    top: 6px;
+    left: 30px;
+}
+
+#team2label {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+
+.playerTracker {
+    position: absolute;
+    background-color: lightblue;
+    border: solid 1px;
+}
+
+.playerBox {
+    position: absolute;
+    cursor: pointer;
+    border: solid 1px red;
+}
+
+.priorities {
+    position: absolute;
+    border: solid 2px white;
+    background-color: black;
+    color: white;
+}
+
+.playerOption {
+    width: 226px;
+    height: 40px;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.playerOption p {
+    margin: 10px;
+    font-family: Helvetica;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.lineup {
+    width: 380px;
+    height: 514px;
+}
+
+.lineuprow {
+    width: 380px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.playerdataholder {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playername {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.playerpos {
+    display: none;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.hl {
+    width: 329px;
+    height: 50px;
+    border: solid 1px #5F6661
+}
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }

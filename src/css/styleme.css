@@ -1,0 +1,116 @@
+
+
+
+
+#cp2{
+	position:fixed;
+	margin-top:550px;
+}
+
+#cp3{
+	position:fixed;
+	margin-top:550px;
+	margin-left:45px;
+}
+/*
+#clear{
+	position:fixed;
+	margin-top:550px;
+	margin-left:90px;
+}*/
+
+#menume{
+	background-color:#CDCDCD;
+	border:2px solid #6A6A6A;
+	border-radius:5px;
+	box-shadow:5px 5px 10px #474747;
+	width:100px;
+	padding-top:5px;
+	padding-bottom:5px;
+	display:none;
+	position:absolute;
+	
+}
+
+.menuItemme{
+	
+	padding-left:5px;
+	padding-right:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	cursor:default;
+}
+.menuItemme:hover{
+
+	background-color:#000;
+}
+
+
+
+/*
+#sidebar {
+  height: 1029px;
+  width: 380px;
+  border: solid .5px #979797;
+  position: absolute;
+  margin-top: -420px;
+  margin-left: 600px;
+	
+  }
+  #team1label {
+  position: absolute;
+  top: 6px;
+  left: 30px;
+}
+  .teambox {
+  height: 514;
+  width: 380;
+  padding: 0;
+}
+
+
+
+.lineup {
+  width: 380px;
+  height: 514px;
+}
+
+.lineuprow {
+  width: 380px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.playerdataholder {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playername {
+  margin: 0;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.playerpos {
+  display: none;
+  margin: 0;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #4a4a4a;
+}*/
+
+
